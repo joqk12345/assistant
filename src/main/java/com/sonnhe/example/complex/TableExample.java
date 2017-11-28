@@ -22,7 +22,7 @@ import org.eclipse.swt.widgets.TreeItem;
 /**
  * @author joqk
  * @Date 2017/11/28 12:28
- * @{description} xxxxx
+ * @{description} 表格与标签页的使用
  **/
 public class TableExample  extends AbstractExample {
     private Table table;
