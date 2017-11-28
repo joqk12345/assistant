@@ -30,14 +30,15 @@ public class LoginFrame extends AbstractExample {
 
     public void todo(Shell shell) {
         Group testGroup = new Group(shell, SWT.NONE);
-        testGroup.setText("User Login");
+        testGroup.setText("用户登录");
         GridLayout layout = new GridLayout();
         layout.numColumns = 2;
         layout.marginWidth = 30;
         layout.marginHeight = 10;
+//        layout.marginBottom = 5;
         testGroup.setLayout(layout);
-        testGroup.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-        {
+        testGroup.setLayoutData(new GridData(GridData.VERTICAL_ALIGN_FILL));
+       {
             Composite composite = new Composite(testGroup, SWT.NONE);
             GridLayout layoutComposite = new GridLayout();
             layoutComposite.numColumns = 2;
@@ -66,10 +67,10 @@ public class LoginFrame extends AbstractExample {
         }
         {
             Label roleLabel = new Label(testGroup, SWT.NONE);
-            roleLabel.setText("role:");
+            roleLabel.setText("角色:");
 
             roleCombo = new Combo(testGroup, SWT.DROP_DOWN);
-            roleCombo.setItems(new String[]{"Admin", "custom"});
+            roleCombo.setItems(new String[]{"管理员", "普通用户"});
             roleCombo.select(1);
         }
         {

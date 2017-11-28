@@ -13,8 +13,8 @@ public abstract class AbstractExample {
     public void run() {
         Display display = new Display();
         Shell shell = new Shell(display);
-        shell.setText("窗口例子程序");
-        shell.setBounds(100, 100, 400, 200);
+        shell.setText("窗口程序");
+        shell.setBounds(100, 100, 400, 260);
         shell.setLayout(new FillLayout());
         todo(shell);
         shell.open();
