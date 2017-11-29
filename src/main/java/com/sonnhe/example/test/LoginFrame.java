@@ -1,5 +1,6 @@
 package com.sonnhe.example.test;
 
+import com.sonnhe.base.view.AbstractExample;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;

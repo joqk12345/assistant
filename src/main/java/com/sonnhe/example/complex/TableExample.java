@@ -1,12 +1,10 @@
 package com.sonnhe.example.complex;
 
-import com.sonnhe.example.test.AbstractExample;
-import javax.swing.text.StyleConstants.ColorConstants;
+import com.sonnhe.base.view.AbstractExample;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
