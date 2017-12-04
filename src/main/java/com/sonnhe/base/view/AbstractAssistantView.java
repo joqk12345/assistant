@@ -1,5 +1,6 @@
 package com.sonnhe.base.view;
 
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
@@ -14,9 +15,10 @@ import java.io.File;
 public abstract class AbstractAssistantView {
     public void run() {
         Display display = new Display();
-        Shell shell = new Shell(display);
+//        Shell shell = new Shell(display);
+        Shell shell = new Shell(SWT.MIN | SWT.CLOSE );
         shell.setText("法官语音助手");
-        shell.setBounds(100, 100, 1100, 824);
+//        shell.setBounds(100, 100, 1024, 767);
         shell.setLayout(new FillLayout());
         todo(shell);
         shell.open();
