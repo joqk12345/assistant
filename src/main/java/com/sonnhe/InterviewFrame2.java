@@ -491,13 +491,10 @@ public class InterviewFrame2 extends AbstractAssistantView {
                 } catch (ExecutionException e1) {
                     e1.printStackTrace();
                 }
-
                 WordUtils.writeInterViewDataDocx(filePath,title,arrayList,false,12);
-
                 dialog.setText("笔录导出");
                 dialog.setMessage("导出成功!");
                 dialog.open();
-
             }
         });
         //文件目录
@@ -528,8 +525,6 @@ public class InterviewFrame2 extends AbstractAssistantView {
                 }
             }
         });
-
-
         //退出系统
         Button exitSysBtn = new Button(shell, SWT.NONE);
         exitSysBtn.setAlignment(SWT.CENTER);
@@ -561,6 +556,7 @@ public class InterviewFrame2 extends AbstractAssistantView {
 //				item2.setText (0, "1");
 //				item2.setText (1, StringUtil.formatText("今天天气咋样天天气咋样天天气咋样天天气咋样天天气咋样气咋样天天气咋样天天气咋样天天气咋样天天气咋样天天气咋样天天气咋样天天气咋样天天气咋样天天气咋样天天气咋样"));
 //			}
+                logger.info("退出系统.....");
                 System.exit(0);
 
             }
