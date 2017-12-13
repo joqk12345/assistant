@@ -341,24 +341,32 @@ public class InterviewFrame2 extends AbstractAssistantView {
                                 shell.getDisplay().asyncExec(new Runnable(){
                                     public void run() {
                                         //清空结果
-                                        if(table.getItemCount()>0) {
+                          /*              if(table.getItemCount()>0) {
                                             table.removeAll();
-                                        }
+                                        }*/
                                         //ToDO  只渲染一句话
 //                                        int key=table.getItemCount();
-//                                        TableItem item3 = new TableItem (table, SWT.NONE);
-//                                        item3.setText (0, sttResults.get(key).getSessionName());
-//                                        item3.setText (1, StringUtil.formatText(sttResults.get(key).getContent()));
+                                        int key=sttResults.size();
+                                        logger.info("key:"+key);
+                                        logger.info("table.getItemCount():"+table.getItemCount());
+                                        if(key>0&&key>table.getItemCount()){
+                                            TableItem item3 = new TableItem (table, SWT.NONE);
+                                            logger.info("进入此方法。。。。。");
+                                            item3.setText (0, sttResults.get(key-1).getSessionName());
+                                            item3.setText (1, StringUtil.formatText(sttResults.get(key-1).getContent()));
+                                        }
+                                        table.setSelection(key-1);
+
 
                                         //循环渲染结果
-                                       for(int i=0;i< sttResults.size() ;i++) {
+                                      /* for(int i=0;i< sttResults.size() ;i++) {
                                             TableItem item3 = new TableItem (table, SWT.NONE);
                                             item3.setText (0, sttResults.get(i).getSessionName());
                                             item3.setText (1, StringUtil.formatText(sttResults.get(i).getContent()));
 //                                            logger.info("展示结果内容:"+sttResults.get(i).getContent());
                                         }
                                         //设置活动选择
-                                        table.setSelection(sttResults.size()-1);
+                                        table.setSelection(sttResults.size()-1);*/
                                     }
                                 });
                             }
