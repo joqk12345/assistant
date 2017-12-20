@@ -2,6 +2,8 @@ package com.sonnhe.base.view;
 
 import com.sonnhe.InterviewFrame2;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.ShellEvent;
+import org.eclipse.swt.events.ShellListener;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
@@ -20,7 +22,27 @@ public abstract class AbstractAssistantView {
         Display display = new Display();
 //        Shell shell = new Shell(display);
         Shell shell = new Shell(SWT.MIN | SWT.CLOSE );
-        shell.setText("法官语音助手");
+        /**
+         * 绑定shell容器的事件
+         */
+        shell.addShellListener(new ShellListener() {
+            public void shellActivated(ShellEvent e) {
+            }
+
+            public void shellClosed(ShellEvent e) {
+                System.exit(0);
+            }
+
+            public void shellDeactivated(ShellEvent e) {
+            }
+
+            public void shellDeiconified(ShellEvent e) {
+            }
+
+            public void shellIconified(ShellEvent e) {
+            }
+        });
+        shell.setText("智慧法院法官智能语音助手");
 //        shell.setBounds(100, 100, 1024, 767);
         shell.setLayout(new FillLayout());
         todo(shell);
